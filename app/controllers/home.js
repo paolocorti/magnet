@@ -1,13 +1,14 @@
 var mongoose = require('mongoose'),
   User = mongoose.model('User');
 
-exports.index = function(req, res){
-
-  User.find(function(err, articles){
-    if(err) throw new Error(err);
-    res.render('home/index', {
-      title: 'Generator-Express MVC',
-      articles: articles
-    });
-  });
+exports.views = function (req, res) {
+  console.log(req)
+  var name = req.params.name;
+  res.render(name);
 };
+
+exports.index = function(req, res){
+  res.render('home/index');
+};
+
+

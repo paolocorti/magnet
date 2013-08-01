@@ -4,7 +4,7 @@ angular.module('magnetApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: '../main.html',
+        templateUrl: 'views/main',
         controller: 'MainCtrl'
       })
       .otherwise({
