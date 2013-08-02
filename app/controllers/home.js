@@ -2,7 +2,6 @@ var mongoose = require('mongoose'),
   User = mongoose.model('User');
 
 exports.views = function (req, res) {
-  console.log(req)
   var name = req.params.name;
   res.render(name);
 };
@@ -10,5 +9,10 @@ exports.views = function (req, res) {
 exports.index = function(req, res){
   res.render('home/index');
 };
+
+exports.loginform = function(req, res){
+  res.render('home/index');
+};
+
 
 

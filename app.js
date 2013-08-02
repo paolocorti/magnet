@@ -1,7 +1,8 @@
 var express = require('express'),
   mongoose = require('mongoose'),
   fs = require('fs'),
-  config = require('./config/config');
+  config = require('./config/config'),
+  checkAuth = require('./public/js/checkAuth');
 
 mongoose.connect(config.db);
 var db = mongoose.connection;
